@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concert Booking</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to our {{.Concert}} booking application</h1>
+        <p>We have a total of {{.TotalTickets}} seats and {{.RemainingTickets}} are still available.</p>
+        <form action="/book" method="POST">
+            <input type="text" name="firstName" placeholder="First Name" required>
+            <input type="text" name="lastName" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="number" name="tickets" placeholder="Number of Tickets" required>
+            <input type="submit" value="Book Tickets">
+        </form>
+    </div>
+</body>
+</html>
